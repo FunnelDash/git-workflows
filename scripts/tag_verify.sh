@@ -33,7 +33,7 @@ fi
 
 if [ "$VERSION_NUMBER" -le "$LATEST_TAG_NUMBER" ]
     then
-        echo "[+] FAIL - The tag version cannot be smaller than $LATEST_TAG"
+        echo "[+] FAIL - The tag $VERSION cannot be smaller or equal than $LATEST_TAG"
         exit 1
     else
         echo "[+] SUCCESS - Merge the PR to have tag $VERSION applied to master branch"
