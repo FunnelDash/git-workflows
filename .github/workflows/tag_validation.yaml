@@ -20,4 +20,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Verify the tag value
-        run: ./scripts/tag_verify.sh
+        run: FunnelDash/git-workflows/scripts/tag_verify.sh
