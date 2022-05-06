@@ -20,7 +20,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Download the script
-        run: wget https://github.com/FunnelDash/git-workflows/blob/master/scripts/tag_verify.sh -P /tmp
+        run: curl -o /tmp/tag_verify.sh https://github.com/FunnelDash/git-workflows/blob/master/scripts/tag_verify.sh
       - name: Give script permissions
         run: chmod +x /tmp/tag_verify.sh
       - name: Execute script
