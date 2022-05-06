@@ -29,7 +29,6 @@ git config --global user.name "Kaleby Cadorin"
 if [ -z "$LATEST_TAG" ]
     then
         echo "No tag applied to the repo yet, the tag $VERSION can be applied"
-        return
     else
         LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
         echo "[+] Latest tag is $LATEST_TAG"

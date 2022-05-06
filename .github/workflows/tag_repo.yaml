@@ -25,5 +25,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Running tagging repo script
-        run: ./scripts/tag.sh
+      - name: Check current directory
+        run: pwd
+      - name: Download the script
+        run: curl -o $PWD/tag.sh https://raw.githubusercontent.com/FunnelDash/git-workflows/master/scripts/tag.sh
+      - name: Give script permissions
+        run: chmod +x $PWD/tag.sh
+      - name: Execute script
+        run: $PWD/tag.sh
