@@ -19,5 +19,9 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Verify the tag value
-        run: FunnelDash/git-workflows/scripts/tag_verify.sh
+      - name: Download the script
+        run: wget https://github.com/FunnelDash/git-workflows/blob/master/scripts/tag_verify.sh -P /tmp
+      - name: Give script permissions
+        run: chmod +x /tmp/tag_verify.sh
+      - name: Execute script
+        run: /tmp/tag_verify.sh
